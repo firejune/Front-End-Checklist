@@ -39,13 +39,6 @@
   <a href="https://github.com/thedaviddias/Front-End-Performance-Checklist#---------front-end-performance-checklist-">🎮 Front-End Performance Checklist</a> • <a href="https://github.com/thedaviddias/Front-End-Design-Checklist#front-end-design-checklist">💎 Front-End Design Checklist</a>
 </p>
 
-
-<h2 align="center"><a href="https://frontendchecklist.io">프론트엔드 체크리스트</a></h2>
-
-<p align="center">
-  <em></em>
-</p>
-
 이 리스트는 다년간의 프론트엔드 개발자들의 경험으로 작성되었으며, 몇몇 항목들은 타 오픈소스 체크리스트들의 참고를 통해 추가되었습니다.
 
 ## 목차

@@ -78,6 +78,8 @@
 * 🛠: 온라인 도구 / 테스트 도구
 * 📹: 미디어 또는 비디오 컨텐츠
 
+> 당신은 [README_APP 파일](https://github.com/thedaviddias/Front-End-Checklist/blob/master/README_APP.md)에서 프로젝트에 대한 모든 것을 설명하는 ***프론트엔드 체크리스트 앱***에 기여햘 수 있습니다.
+
 ---
 
 ## Head
@@ -95,7 +97,7 @@
 
 > 📖 [문자 인코딩 결정하기 - HTML5 W3C](https://www.w3.org/TR/html5/syntax.html#determining-the-character-encoding)
 
-*다음 3개의 메타 태그(Charset, X-UA Compatible and Viewport)들은 다른 요소들에 비해 head 안에서도 상단에 위치해야만 합니다.*
+*다음 2개의 메타 태그(Charset과 Viewport)들은 다른 요소들에 비해 head 안에서도 상단에 위치해야만 합니다.*
 
 * [ ] **Charset:** ![High][high_img] 문자집합(UTF-8)이 올바르게 선언됨
 
@@ -103,15 +105,6 @@
 <!-- 이 문서에 대한 문자 인코딩을 설정 -->
 <meta charset="utf-8">
 ```
-
-* [ ] **X-UA-Compatible:** ![Medium][medium_img] X-UA-Compatible 메타 태그가 존재함
-
-```html
-<!-- Internet Explorer에게 최신의 렌더링 엔진을 사용하라고 지시 -->
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-```
-
-> * 📖 [Internet Explorer를 위한 레거시 문서 모드 지정하기](https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx)
 
 * [ ] **Viewport:** ![High][high_img] Viewport가 제대로 선언됨
 
@@ -202,7 +195,6 @@ browserconfig.xml 파일에서 사용되는 최소한의 XML 내용은 다음과
 <link rel="canonical" href="http://example.com/2017/09/a-new-article-to-read.html">
 ```
 
-
 > * 📖 [표준 URL을 사용하기 - Search Console Help - Google Support](https://support.google.com/webmasters/answer/139066?hl=en)
 > * 📖 [rel=canonical을 사용할 때 흔히 겪는 5가지 실수 - Google Webmaster Blog](https://webmasters.googleblog.com/2013/04/5-common-mistakes-with-relcanonical.html)
 
@@ -240,6 +232,9 @@ browserconfig.xml 파일에서 사용되는 최소한의 XML 내용은 다음과
 * [ ] **CSS의 순서:** ![High][high_img] 모든 CSS 파일이 `<head>` 내에서 자바스크립트 파일보다 이전에 로딩이 완료됨 (자바스크립트 파일이 비동기적으로 로딩되는 특정한 경우는 제외함).
 
 ### 소셜미디어 관련 메타 태그
+Visualize and generate automatically our social meta tags with [Meta Tags](https://metatags.io/)
+
+***Facebook OG*** and ***Twitter Cards*** are, for any website, highly recommended. The other social media tags can be considered if you target a particular presence on those and want to ensure the display.
 
 * [ ] **Facebook Open Graph:** ![Low][low_img] 모든 Facebook의 Open Graph (OG) 가 테스트 되었으며, 그것들 중에 누락된 정보나 잘못된 정보를 가지고 있지는 않나? (이미지의 경우 최소한 600 x 315 픽셀은 되어야 하며, 1200 x 630 픽셀 크기를 권장함)
 
@@ -314,6 +309,7 @@ browserconfig.xml 파일에서 사용되는 최소한의 XML 내용은 다음과
 
 * [ ] **광고차단기 테스트:** ![Medium][medium_img] 광고차단기가 활성화 된 상태에서도 컨텐츠가 제대로 보여짐 (사람들에게 광고차단기를 비활성화 해달라고 메세지를 알릴수도 있습니다)
 
+> * 📖 [Use AdBlocking in your Dev Environment](https://andreicioara.com/use-adblocking-in-your-dev-environment-48db500d9b86)
 
 **[⬆ 목차로](#목차)**
 
@@ -379,6 +375,7 @@ browserconfig.xml 파일에서 사용되는 최소한의 XML 내용은 다음과
 
 > * 🛠 [UnCSS Online](https://uncss-online.com/)
 > * 🛠 [PurifyCSS](https://github.com/purifycss/purifycss)
+> * 🛠 [PurgeCSS](https://github.com/FullHuman/purgecss)
 > * 🛠 [Chrome DevTools Coverage](https://developers.google.com/web/updates/2017/04/devtools-release-notes#coverage)
 
 
@@ -399,7 +396,7 @@ browserconfig.xml 파일에서 사용되는 최소한의 XML 내용은 다음과
 * [ ] **모바일 브라우저:**  ![High][high_img] 모든 페이지가 모든 현존하는 모바일 브라우저에서 테스트 됨 (Native browser, Chrome, Safari... 등).
 * [ ] **운영체제:**  ![High][high_img] 모든 페이지가 모든 현존하는 운영체제에서 테스트 됨 (Windows, Android, iOS, Mac... 등).
 
-- [ ] **Pixel perfect:** ![High][high_img] 페이지가 Pixel perfect한 상태(원래 의도했던 디자인대로 화면에 보여짐)인가? 창작물에 따라서 100% 정확하지 않을 수도 있지만, 의도했던 템플릿에 가까워야 함
+- [ ] **디자인 충실도:** ![Low][low_img] 창작물에서 의도했던 디자인 품질에 가까워야 함, 일부 도구를 사용하여 코드 구현과 비교하고 일관성을 보장할 수 있음.
 
 > [Pixel Perfect - Chrome 확장도구](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en)
 
@@ -421,8 +418,13 @@ browserconfig.xml 파일에서 사용되는 최소한의 XML 내용은 다음과
 * [ ] **최적화:** ![High][high_img] 모든 이미지가 브라우저에 렌더링 될 수 있도록 최적화 되었나? 홈페이지 같이 성능이 중요한 페이지에는 WebP 포맷을 사용할 수도 있음
 
 > * 🛠 [Imagemin](https://github.com/imagemin/imagemin)
-> * 🛠 [ImageOptim](https://imageoptim.com/)를 사용하여 당신의 이미지를 무료로 최적화하세요
+> * 🛠 [ImageOptim](https://imageoptim.com/)를 사용하여 당신의 이미지를 무료로 최적화하세요.
+> * 🛠 [KeyCDN Image Processing](https://www.keycdn.com/support/image-processing)를 사용하여 실시간으로 이미지를 최적화하세요.
 > * 🛠 [Kraken.io](https://kraken.io/web-interface)를 사용하여 png와 jpg을 꽤나 대단하게 최적화 할 수 있습니다. 파일 당 1MB에 대해서는 무료입니다.
+> * 🛠 [TinyPNG](https://tinypng.com/) png, apng(애니메이션 png)와 jpg 이미지를 손실없이 최적화합니다. 무료 및 유료 버전 있음
+> * 🛠 [ZorroSVG](http://quasimondo.com/ZorroSVG/) svg 마스킹을 사용하여 투명 이미지, jpg와 같은 압축
+> * 🛠 [SVGO](https://github.com/svg/svgo) SVG 벡터 그래픽 파일을 최적화 하기 위한 Nodejs기반 도구.
+> * 🛠 [SVGOMG](https://jakearchibald.github.io/svgomg/) SVGO의 온라인 웹기반 GUI 버전, svg 파일 최적화
 
 * [ ] **Picture/Srcset:** ![Medium][medium_img] picture와 srcset을 이용하여 사용자의 현재 뷰포트에 가장 적합한 이미지를 제공하였음
 
@@ -466,6 +468,11 @@ browserconfig.xml 파일에서 사용되는 최소한의 XML 내용은 다음과
 * [ ] **Non-blocking:** ![Medium][medium_img] JavaScript 파일들은 `async`와 `defer` 속성값을 이용하여 비동기적으로 로드 되어야 함
 
 > * 📖 [렌더링을 막는 자바스크립트 제거하기](https://developers.google.com/speed/docs/insights/BlockingJS)
+
+* [ ] **Optimized and updated JS libraries:** ![Medium][medium_img] All JavaScript libraries used in your project are necessary (prefer Vanilla Javascript for simple functionalities), updated to their latest version and don't overwhelm your JavaScript with unnecessary methods.
+
+> * 📖 [You may not need jQuery](http://youmightnotneedjquery.com/)
+> * 📖 [Vanilla JavaScript for building powerful web applications](https://plainjs.com/)
 
 * [ ] **Modernizr:** ![Low][low_img] 특정한 기능을 지칭하고 싶다면, 커스터마이징 된 Modernizr를 이용하여 `<html>` 태그 내에 클래스들을 추가할 수 있음
 
@@ -536,9 +543,13 @@ browserconfig.xml 파일에서 사용되는 최소한의 XML 내용은 다음과
 
 ### 모범 사례
 
-- [ ] **페이지 용량:** ![High][high_img] 각 페이지의 용량이 500KB 이하임
+- [ ] **Goals to achieve:** ![Medium][medium_img] Your pages should reach these goals:
+  - First Meaningful Paint under 1 second
+  - Time To Interactive under 5 seconds for the "average" configuration (a $200 Android on a slow 3G network with 400ms RTT and 400kbps transfer speed) and under 2 seconds for repeat visits
+  - Critical file size under 170Kb gzipped
 
 > * 🛠 [웹사이트 페이지 분석](https://tools.pingdom.com)
+> * 🛠 [웹페이지 테스트](https://www.webpagetest.org/)
 > * 📖 [페이지 용량을 제한함으로써 웹을 더욱 가볍게 만드세요](https://evilmartians.com/chronicles/size-limit-make-the-web-lighter)
 
 - [ ] **최소화:** ![Medium][medium_img] HTML이 최소화가 되었음
@@ -593,6 +604,7 @@ browserconfig.xml 파일에서 사용되는 최소한의 XML 내용은 다음과
 > * 🛠 [Google에서 모바일 속도를 측정해보세요](https://testmysite.withgoogle.com)
 > * 🛠 [WebPagetest - 웹사이트 성능 및 최적화 테스트](https://www.webpagetest.org/)
 > * 🛠 [GTmetrix - 웹사이트 속도 및 성능 최적화](https://gtmetrix.com/)
+> * 🛠 [Speedrank - 웹사이트 성틍 개선](https://speedrank.app/)
 
 **[⬆ 목차로](#목차)**
 
@@ -618,15 +630,6 @@ browserconfig.xml 파일에서 사용되는 최소한의 XML 내용은 다음과
 * [ ] **헤딩:** ![High][high_img] 헤딩이 올바른 순서(H1부터 H6까지)로 적절히 사용되어야 함
 
 > * 📹 [헤딩과 랜드마크가 그렇게 중요한 이유 -- A11ycasts #18](https://www.youtube.com/watch?v=vAAzdi1xuUY&index=9&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
-
-#### 랜드마크
-
-- [ ] **banner 역할:** ![High][high_img] `<header>` 태그가 `role="banner"` 속성값을 가지고 있음
-- [ ] **navigation 역할:** ![High][high_img] `<nav>` 태그가 `role="navigation"` 속성값을 가지고 있음
-- [ ] **main 역할:** ![High][high_img] `<main>` 태그가 `role="main"` 속성값을 가지고 있음
-
-> * 📖 [ARIA 랜드마크를 이용하여 페이지 내의 특정 지점을 식별하기](https://www.w3.org/WAI/GL/wiki/Using_ARIA_landmarks_to_identify_regions_of_a_page)
-> * 📖 [ARIA 역할의 범주](https://www.w3.org/TR/wai-aria/roles#roles_categorization)
 
 ### 시맨틱
 
@@ -688,6 +691,7 @@ browserconfig.xml 파일에서 사용되는 최소한의 XML 내용은 다음과
 * [ ] **HTML 사이트맵:** ![Medium][medium_img] HTML 사이트맵이 제공되었으며 웹사이트의 푸터 내에 존재하는 링크를 통하여 접근이 가능함
 
 > * 📖 [사이트맵 가이드라인 - Google Support](https://support.google.com/webmasters/answer/183668?hl=ko)
+
 * [ ] **Pagination link tags:** ![Medium][medium_img] Provide `rel="prev"` and `rel="next"` to indicate paginated content.
 
 > * 🛠 [Pagination (rel="prev/next") Testing Tool](https://technicalseo.com/seo-tools/rel-prev-next/)
@@ -718,6 +722,7 @@ browserconfig.xml 파일에서 사용되는 최소한의 XML 내용은 다음과
 * 🇫🇷 French: [ynizon/Front-End-Checklist](https://github.com/ynizon/Front-End-Checklist)
 * 🇷🇺 Russian: [ungear/Front-End-Checklist](https://github.com/ungear/Front-End-Checklist)
 * 🇹🇷 Turkish: [eraycetinay/Front-End-Checklist](https://github.com/eraycetinay/Front-End-Checklist)
+* 🇩🇪 German: [xfuture603/Front-End-Checklist](https://github.com/xFuture603/Front-End-Checklist)
 
 ---
 
@@ -751,7 +756,13 @@ browserconfig.xml 파일에서 사용되는 최소한의 XML 내용은 다음과
 
 이 브랜치는 필요하다면 구조나 컨텐츠에 상당한 변화를 줄 수 있습니다. 간단한 에러 수정을 하거나 새로운 항목을 추가할 경우, master 브랜치에 직접 하는 것을 추천드립니다.
 
-## support
+### Online Setup with a single Click
+
+You can use gitpod ( A free VS Code like IDE) for contributing online, with a single click it will launch a ready to code workspace with all the dependencies pre-installed, build finished & the web server running so that you can start coding straight away.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/thedaviddias/Front-End-Checklist)
+
+## Support
 
 질문이나 제안이 있다면, 주저하지 말고 Gitter나 Twitter를 이용하세요:
 
@@ -763,20 +774,20 @@ browserconfig.xml 파일에서 사용되는 최소한의 XML 내용은 다음과
 
 **[David Dias](https://github.com/thedaviddias/Front-End-Checklist)**
 
-## contributors
+## Contributors
 
 This project exists thanks to all the people who contribute. [[Contribute]](CONTRIBUTING.md).
 <a href="https://github.com/thedaviddias/Front-End-Checklist/graphs/contributors"><img src="https://opencollective.com/front-end-checklist/contributors.svg?width=890" /></a>
 
 
-## backers
+## Backers
 
 Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/front-end-checklist#backer)]
 
 <a href="https://opencollective.com/front-end-checklist#backers" target="_blank"><img src="https://opencollective.com/front-end-checklist/backers.svg?width=890"></a>
 
 
-## sponsors
+## Sponsors
 
 Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/front-end-checklist#sponsor)]
 
@@ -790,7 +801,6 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 <a href="https://opencollective.com/front-end-checklist/sponsor/7/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/7/avatar.svg"></a>
 <a href="https://opencollective.com/front-end-checklist/sponsor/8/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/8/avatar.svg"></a>
 <a href="https://opencollective.com/front-end-checklist/sponsor/9/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/9/avatar.svg"></a>
-
 
 
 ## 라이센스

@@ -91,11 +91,10 @@
 * [ ] **Doctype:** ![High][high_img] HTML5 을 사용하며, Doctype이 모든 HTML 페이지의 최상단에 위치함
 
 ```html
-<!-- Doctype HTML5 -->
-<!doctype html>
+<!doctype html> <!-- HTML5 -->
 ```
 
-> 📖 [문자 인코딩 결정하기 - HTML5 W3C](https://www.w3.org/TR/html5/syntax.html#determining-the-character-encoding)
+> * 📖 [문자 인코딩 결정하기 - HTML5 W3C](https://www.w3.org/TR/html5/syntax.html#determining-the-character-encoding)
 
 *다음 2개의 메타 태그(Charset과 Viewport)들은 다른 요소들에 비해 head 안에서도 상단에 위치해야만 합니다.*
 
@@ -147,7 +146,7 @@
 > * 📖 [Favicons, Touch Icons, Tile Icons, etc. Which Do You Need? - CSS Tricks](https://css-tricks.com/favicon-quiz/)
 > * 📖 [PNG favicons - caniuse](https://caniuse.com/#feat=link-icon-png)
 
-* [ ] **Apple 터치 아이콘:** ![Low][low_img] 아이폰의 모바일 웹 어플리케이션의 아이콘으로 사용되는 favicon을 설정해주는 apple-touch-icon 속성을 사용함
+* [ ] **Apple 웹앱 메타:** ![Low][low_img] Apple에만 유효한 메타-태그
 
 ```html
 <!-- Apple 터치 아이콘 (최소한 200x200 px) -->
@@ -164,14 +163,14 @@
 > * 📖 [웹 어플리케이션 설정하기](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
 > * 📖 [Meta Tags 지원하기](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html)
 
-- [ ] **윈도우 타일:** ![Low][low_img] 윈도우 타일을 설정하는 msapplication-config 속성을 사용함
+- [ ] **윈도우 타일:** ![Low][low_img] 윈도우 타일에만 유효하게 연결됨
 
 ```html
 <!-- Microsoft 타일 -->
 <meta name="msapplication-config" content="browserconfig.xml" />
 ```
 
-browserconfig.xml 파일에서 사용되는 최소한의 XML 내용은 다음과 같습니다:
+`browserconfig.xml` 파일에서 사용되는 최소한의 XML 내용은 다음과 같습니다:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -192,6 +191,7 @@ browserconfig.xml 파일에서 사용되는 최소한의 XML 내용은 다음과
 * [ ] **Canonical:** ![Medium][medium_img] 컨텐츠의 중복을 피하기 위하여 `rel="canonical"` 을 사용함
 
 ```html
+<!-- 컨텐츠 중복 문제 방지 -->
 <link rel="canonical" href="http://example.com/2017/09/a-new-article-to-read.html">
 ```
 
@@ -207,7 +207,6 @@ browserconfig.xml 파일에서 사용되는 최소한의 XML 내용은 다음과
 * [ ] **글자 방향 속성:** ![Medium][medium_img] 글자들의 방향이 제대로 설정됨 (우리나라에서는 좌에서 우로 글씨를 읽고 쓰지만 몇몇 나라에서는 우에서 좌로 읽고 쓰는 경우도 있음)
 
 ```html
-<!-- rtl: right to left -->
 <html dir="rtl">
 ```
 
@@ -231,7 +230,7 @@ browserconfig.xml 파일에서 사용되는 최소한의 XML 내용은 다음과
 
 * [ ] **CSS의 순서:** ![High][high_img] 모든 CSS 파일이 `<head>` 내에서 자바스크립트 파일보다 이전에 로딩이 완료됨 (자바스크립트 파일이 비동기적으로 로딩되는 특정한 경우는 제외함).
 
-### 소셜미디어 관련 메타 태그
+### 소셜 메타
 Visualize and generate automatically our social meta tags with [Meta Tags](https://metatags.io/)
 
 ***Facebook OG*** and ***Twitter Cards*** are, for any website, highly recommended. The other social media tags can be considered if you target a particular presence on those and want to ensure the display.
@@ -334,6 +333,8 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 > * 🛠 [Typekit 웹폰트 로더](https://github.com/typekit/webfontloader)
 
 **[⬆ 목차로](#목차)**
+
+---
 
 ## CSS
 
@@ -494,7 +495,6 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 > * [securityheaders.io](https://securityheaders.io/)
 > * [Observatory by Mozilla](https://observatory.mozilla.org/)
-> * [ASafaWeb - Automated Security Analyser for ASP.NET Websites](https://asafaweb.com/)
 
 ### 모범 사례
 
